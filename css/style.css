@@ -53,4 +53,17 @@ section{
     top: 0;
     justify-content: flex-end;
     position: sticky;
+    margin: 0 -2px;
+    padding: 0.5rem calc(1.25rem + 2px) 0.5rem 0; /*La función calc() es una función CSS que te permite calcular un valor basado en otros valores. Por ejemplo, lo puedes usar para calcular el ancho del viewport menos el margen de un elemento*/
+    z-index: 999;/*La propiedad z-index especifica el orden de apilamiento de un elemento y sus descendientes. Un elemento con un valor de z-index mayor se superpondrá a un elemento con un valor de z-index menor*/
+}
+
+#years span[class]{
+    font-weight: bold;
+    width: 4.5rem;
+    text-align: right;
+}
+
+#table-wrap{
+    padding: 0 0.75rem 1.5rem 0.75rem;
 }
