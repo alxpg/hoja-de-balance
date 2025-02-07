@@ -7,6 +7,51 @@ body{
     color: #0a0a23;
 }
 
-span[class~="sr-only"]{
+span[class~="sr-only"]{ /*El selector de atributo (~) se utiliza para seleccionar elementos con un atributo especifico*/
     border: 0;
+    clip: rect(1px, 1px, 1px, 1px); /*Clip se utiliza para definir la forma de un elemento, en este caso se esta definiendo un rectangulo de 1px de ancho y 1px de alto*/
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    padding: 0;
+    margin: -1px;
+}
+
+h1{
+    max-width: 37.25rem;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem;    
+}
+
+h1 .flex{ /*.flex es una clase que se le asigna a un div que contiene los elementos que se quieren alinear*/
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;    
+}
+
+h1 .flex span:first-of-type{ /*El selector de pseudo-clase first-of-type selecciona el primer elemento de su tipo*/
+    font-size: 0.7em;
+}
+
+h1 .flex span:last-of-type{ /*El selector de pseudo-clase first-of-type selecciona el ultimo elemento de su tipo*/
+    font-size: 1.2em;
+}
+
+section{
+    max-width: 40rem;
+    margin: 0 auto;
+    border: 2px solid #d0d0d5;
+}
+
+#years {
+    color: #fff;
+    background-color: #0a0a23;
+    display: flex;
+    top: 0;
+    justify-content: flex-end;
+    position: sticky;
+    padding: 1rem;
 }
