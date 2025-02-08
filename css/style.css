@@ -20,6 +20,13 @@ span[class~="sr-only"]{ /*El selector de atributo (~) se utiliza para selecciona
     margin: -1px;
 }
 
+span:not(.sr-only){ /*El selector :not() selecciona todos los elementos excepto los que cumplan con la condición*/
+    font-weight: normal;
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
 h1{
     max-width: 37.25rem;
     margin: 0 auto;
