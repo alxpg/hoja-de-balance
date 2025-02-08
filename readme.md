@@ -7,7 +7,8 @@ La hoja de balance es un documento financiero que muestra la situación económi
 3. **Patrimonio**: Diferencia entre los activos y los pasivos, representando el valor neto de la entidad.
 
 La fórmula básica de la hoja de balance es:
-```
+
+```plaintext
 Activos = Pasivos + Patrimonio
 ```
 
