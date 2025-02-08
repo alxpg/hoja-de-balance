@@ -153,6 +153,6 @@ tr.data td{
     padding: 0.3rem 0.25rem 0;
 }
 
-tr.total td:nth-of-type(:last-of-type){ /*El selector de pseudo-clase last-of-type selecciona el ultimo elemento de su tipo*/
+tr.data td:last-of-type(){ /*El selector de pseudo-clase last-of-type selecciona el ultimo elemento de su tipo*/
     padding-right: 0.5rem;
 }
