@@ -6,19 +6,18 @@ body{
     font-family: 'Arial', sans-serif;
     color: #0a0a23;
 }
-
-span[class~="sr-only"]{ /*El selector de atributo (~) se utiliza para seleccionar elementos con un atributo especifico*/
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px); /*Clip se utiliza para definir la forma de un elemento, en este caso se esta definiendo un rectangulo de 1px de ancho y 1px de alto*/
-    clip-path: inset(50%);
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    white-space: nowrap;
-    position: absolute;
-    padding: 0;
-    margin: -1px;
-}
+span[class~="sr-only"]  { /*El selector de atributo (~) se utiliza para seleccionar elementos con un atributo especifico*/
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important; /*Clip se utiliza para definir la forma de un elemento, en este caso se esta definiendo un rectangulo de 1px de ancho y 1px de alto*/
+    clip-path: inset(50%) !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    position: absolute !important;
+    padding: 0 !important;
+    margin: -1px !important;
+} /*!important se utiliza para darle prioridad a una regla de estilo*/
 
 span:not(.sr-only){ /*El selector :not() selecciona todos los elementos excepto los que cumplan con la condición*/
     font-weight: normal;
@@ -73,4 +72,87 @@ section{
 
 .table-wrap{
     padding: 0 0.75rem 1.5rem 0.75rem;
+}
+
+table{
+    position: relative;
+    width: 100%;
+    margin-top: 3rem;
+    border: 0;
+    border-collapse: collapse;
+}
+
+table caption{
+    color: #356eaf;
+    font-size: 1.3em;
+    font-weight: normal;
+    position: absolute;
+    top: -2.25rem;
+    left: 0.5rem;
+}
+
+tbody td{
+    min-width: 4rem;
+    max-width: 4rem;
+    width: 100vw;
+}
+
+tbody th{
+    width:calc(100% - 12rem);/*calc() se utiliza para calcular el ancho de un elemento*/
+}
+
+tr[class="total"]{ /*El selector apunta a los elementos que tengan la clase total*/
+    border-bottom: 4px double #0a0a23; /*La propiedad border-bottom establece el estilo, el ancho y el color de la línea de borde inferior de un elemento*/
+    font-weight: bold;/*La propiedad font-weight establece el grosor de la fuente*/
+}
+
+tr[class="total"] th{ 
+    text-align: left;
+    padding: 0.5rem 0 0.25rem 0.5rem;
+}
+
+tr.total td{ 
+    text-align: right;
+    padding: 0 0.25rem;
+}
+
+tr.total:hover{ /*El selector :hover se utiliza para seleccionar elementos cuando el usuario mueve el mouse sobre ellos*/
+    background-color: #99c9ff;
+}
+
+tr.total td:nth-of-type(3){ /*El selector de pseudo-clase nth-of-type selecciona el tercer elemento de su tipo*/
+    padding-right: 0.5rem;
+}
+
+td[class="current"] {
+    font-style: italic;
+} 
+
+tr[class="data"] {/*El selector apunta a los elementos que tengan la clase data*/
+    background-image: linear-gradient(to bottom, #dfdfe2 1.845rem, white 1.845rem); /*La propiedad background-image establece una o más imágenes de fondo para un elemento*/
+} 
+
+tr.data th{ 
+    text-align: left;
+    margin-top: 0.3rem;
+    padding-top: 0.3rem;
+    padding-left: 0.5rem;
+}
+
+tr.data th .description{ /*.description es una clase que se le asigna a un div que contiene los elementos que se quieren alinear*/
+    display: block;
+    font-style: italic;
+    font-weight: normal;
+    padding: 1rem 0 0.75rem;
+    margin-right: -13.5rem;
+}
+
+tr.data td{ 
+    vertical-align: top;
+    text-align: right;
+    padding: 0.3rem 0.25rem 0;
+}
+
+tr.total td:nth-of-type(:last-of-type){ /*El selector de pseudo-clase last-of-type selecciona el ultimo elemento de su tipo*/
+    padding-right: 0.5rem;
 }
